@@ -12,6 +12,8 @@ import { EuphoriaEvent } from "./components/services/index";
 import { useState, useEffect, } from "react";
 import { useParams, useLocation } from 'react-router-dom';
 import Instruction from './Pages/Instruction';
+import Leaderboard from './components/Points/Leaderboards';
+import Schedules from './Pages/Schedules';
 // import Demo from './components/Euphoria/demo';
 
 const EventDetail = ({ data }) => {
@@ -74,6 +76,14 @@ const App = () => {
         element={
           <>
             <Points />
+          </>
+        }
+      />
+      <Route
+        path="/schedules"
+        element={
+          <>
+            <Schedules />
           </>
         }
       />

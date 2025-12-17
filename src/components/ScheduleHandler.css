@@ -1,0 +1,34 @@
+/* Base (Desktop First) */
+.shmain {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 24px;
+  padding: 24px 0;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .shmain {
+    gap: 20px;
+    padding: 20px 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .shmain {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 16px;
+    padding: 16px 12px;
+  }
+}
+
+/* Loading text */
+.sh-loading {
+  text-align: center;
+  font-size: 1rem;
+  color: #f9c744;
+  margin-top: 40px;
+  letter-spacing: 1px;
+}

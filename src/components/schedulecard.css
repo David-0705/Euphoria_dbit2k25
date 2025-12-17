@@ -1,0 +1,140 @@
+
+
+.schedule-card {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #120d02 0%,     /* near-black base */
+    #3b2a06 35%,    /* dark gold */
+    #6e4b0a 65%,    /* warm gold */
+    #3b2a06 100%    /* dark gold edge */
+  );
+  border: 1px solid #F9C744;
+  border-radius: 18px;
+  padding: 22px;
+  color: #FDE6A3;
+  box-shadow: 0 0 18px rgba(249, 199, 68, 0.28);
+  transition: 0.25s ease;
+  margin: 28px 0;
+}
+
+
+.schedule-card:hover {
+  box-shadow: 0 0 28px rgba(255, 106, 0, 0.4);
+  background: linear-gradient(
+    135deg,
+    #23108d 0%,
+    #2e137a 50%,
+    #3a0f5f 100%
+  );
+}
+
+
+.schedule-card:hover {
+  box-shadow: 0 0 28px rgba(255, 106, 0, 0.4);
+}
+
+/* Title Row */
+.schedule-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* Title + Icon */
+.schedule-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFF1C1; /* soft champagne */
+}
+
+.schedule-icon {
+  width: 22px;
+  height: 22px;
+  color: #F9C744; /* primary gold */
+}
+
+.vs-text {
+  color: #ff0000; /* lighter gold */
+  font-weight: 800;
+}
+
+
+.status-badge {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 10px;
+  border: 1px solid;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* UPCOMING */
+.status-badge.upcoming {
+  background: blue;
+  border-color: #F9C744;
+  color: #FFE08A;
+}
+
+/* LIVE */
+.status-badge.live {
+  background: lightgreen;
+  border-color: #FFD56A;
+  color: #120d02; /* dark contrast */
+  animation: pulse 1.5s infinite;
+}
+
+/* FINISHED */
+.status-badge.finished {
+  background: red;
+  border-color: #D8B24A;
+  color: #FFF1C1;
+}
+
+
+
+/* Info Styles */
+.schedule-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  color: #FFE8A3; /* readable gold */
+}
+
+.info-icon {
+  width: 16px;
+  height: 16px;
+  color: #F9C744;
+}
+
+
+/* Winner */
+.winner-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  color: #FFD56A;
+  margin-top: 14px;
+}
+
+.winner-icon {
+  width: 18px;
+  height: 18px;
+  color: #F9C744;
+}
+
+
+/* Pulse for LIVE Tag */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.55; }
+  100% { opacity: 1; }
+}

@@ -1,183 +1,83 @@
-// import { useLocation } from "react-router-dom";
-// import { disablePageScroll, enablePageScroll } from "scroll-lock";
-
-// import { brainwave, hysteria } from "../assets";
-// import { navigation } from "../constants";
-// import Button from "./Button";
-// import MenuSvg from "../assets/svg/MenuSvg";
-// import { HamburgerMenu } from "./design/Header";
-// import { useState } from "react";
-
-// const Header = () => {
-//   const pathname = useLocation();
-//   const [openNavigation, setOpenNavigation] = useState(false);
-
-//   const toggleNavigation = () => {
-//     if (openNavigation) {
-//       setOpenNavigation(false);
-//       enablePageScroll();
-//     } else {
-//       setOpenNavigation(true);
-//       disablePageScroll();
-//     }
-//   };
-
-//   const handleClick = () => {
-//     if (!openNavigation) return;
-
-//     enablePageScroll();
-//     setOpenNavigation(false);
-//   };
-
-//   return (
-//     <div
-//       className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
-//         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
-//       }`}
-//     >
-//       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-       
-//           <img src={hysteria} width={50} height={50}  alt="Brainwave" />
-//           <a className="block w-[12rem] xl:mr-8 px-5" href="#home">Hysteria </a>
-
-//         <nav
-//           className={`${
-//             openNavigation ? "flex" : "hidden"
-//           } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
-//         >
-//           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
-//             {navigation.map((item) => (
-//               <a
-//                 key={item.id}
-//                 href={item.url}
-//                 onClick={handleClick}
-//                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-//                   item.onlyMobile ? "lg:hidden" : ""
-//                 } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-//                   item.url === pathname.hash
-//                     ? "z-2 lg:text-n-1"
-//                     : "lg:text-n-1/50"
-//                 } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-//               >
-//                 {item.title}
-//               </a>
-//             ))}
-//           </div>
-
-//           <HamburgerMenu />
-//         </nav>
-
-//         <a
-//           href="#signup"
-//           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
-//         >
-//           New account
-//         </a>
-//         <Button className="hidden lg:flex" href="#login">
-//           Sign in
-//         </Button>
-
-//         <Button
-//           className="ml-auto lg:hidden"
-//           px="px-3"
-//           onClick={toggleNavigation}
-//         >
-//           <MenuSvg openNavigation={openNavigation} />
-//         </Button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Header;
-
-
-
-import { useLocation } from "react-router-dom";
-import { disablePageScroll, enablePageScroll } from "scroll-lock";
-
-import { brainwave, hysteria } from "../assets";
+import { useLocation, useNavigate } from "react-router-dom";
+import { hysteria } from "../assets";
 import { navigation } from "../constants";
-import Button from "./Button";
-import MenuSvg from "../assets/svg/MenuSvg";
-import { HamburgerMenu,BackgroundCircles,SideLines,Rings,Backimg } from "./design/Header";
-import { useState } from "react";
-
 const Header = () => {
   const pathname = useLocation();
-  const [openNavigation, setOpenNavigation] = useState(false);
-
-  const toggleNavigation = () => {
-    if (openNavigation) {
-      setOpenNavigation(false);
-      enablePageScroll();
-    } else {
-      setOpenNavigation(true);
-      disablePageScroll();
-    }
-  };
-
-  const handleClick = () => {
-    if (!openNavigation) return;
-
-    enablePageScroll();
-    setOpenNavigation(false);
-  };
-
+const navigate = useNavigate();
+const currentPath = pathname.pathname;
+const toRoute = (url) => (url.startsWith("/#/") ? url.replace("/#/", "/") : url);
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 py-2 ${
-        openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
-      }`}
+      className={`
+        fixed top-0 left-0 w-full z-50 border-b 
+        py-3 lg:py-4
+        bg-black/85 backdrop-blur-xl
+        border-[#b8923b]/40
+        shadow-[0_2px_25px_rgba(255,215,0,0.18)]
+        transition-all duration-300
+      `}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4 sm:w-full">
-      <a className="block w-[12rem] xl:mr-2 px-5 z-3" href="/">
-          <img className="z-3 -my-5 -mx-8" src={hysteria} width={75} height={75}  alt="Euphoria" />
-      </a>
+      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 w-full">
 
-        <nav
-          className={`${
-            openNavigation ? "flex" : "hidden"
-          } fixed top-[0rem] left-0 right-0 bottom-0 bg-n-8   `}
-        >
-          <div className="relative z-1 flex flex-col items-center justify-center m-auto lg:flex-column">
-            {navigation.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-2 ${
-                  item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-2x1 lg:font-semibold ${
-                  item.url === pathname.hash
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1"
-                } lg:leading-5 lg:hover:text-color-3 xl:px-12`}
-              >
-                {item.title}
-              </a>
-              
-            ))}
-            
-          </div>
-            
-          <HamburgerMenu />
-          <BackgroundCircles/>
-          
-            <SideLines/>
-            <Rings/>
-            {/* <Backimg/> */}
-            
+        <a className="block w-[12rem] xl:mr-2 px-5 z-20" href="/">
+          <img
+            className="z-20 -my-5 -mx-8"
+            src={hysteria}
+            width={75}
+            height={75}
+            alt="Euphoria"
+          />
+        </a>
+
+      {/* desktop */}
+        <nav className="hidden lg:flex ml-auto gap-10 items-center">
+          {navigation.map((item) => (
+            <a
+              key={item.id}
+              href={item.url}
+              className={`
+                relative text-[17px] font-semibold tracking-wide
+                text-[#d6b675] hover:text-[#ffe38a]
+                transition-all duration-300
+                pb-1
+                after:absolute after:left-0 after:bottom-0
+                after:w-0 after:h-[2px]
+                after:bg-gradient-to-r after:from-[#d4af37] after:to-[#ffdd55]
+                after:transition-all after:duration-300
+                hover:after:w-full
+                ${item.url === pathname.hash ? "text-[#ffdd7a] after:w-full" : ""}
+              `}
+            >
+              {item.title}
+            </a>
+          ))}
         </nav>
 
+       
+    {/*  mobile */}
+    <div className="lg:hidden ml-auto">
+  <select
+    className="p-3 bg-black border border-[#d6b675]/40 rounded-xl text-[#f5d487] font-semibold tracking-wide"
+    onChange={(e) => {
+      const route = e.target.value;
+      navigate(route);
+    }}
+    value={currentPath}
+  >
+    {navigation.map((item) => {
+      const route = toRoute(item.url);
+      return (
+        <option key={item.id} value={route}>
+          {item.title}
+        </option>
+      );
+    })}
+  </select>
+</div>
 
-        <Button
-          className="ml-auto "
-          px="px-3"
-          onClick={toggleNavigation}
-        >
-          <MenuSvg openNavigation={openNavigation} />
-        </Button>
+   
+
+        
       </div>
     </div>
   );
