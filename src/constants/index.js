@@ -85,48 +85,20 @@ export const navigation = [
     title: "Tier List",
     url: "/#/tierlist",
   },
+  {
+    id: "6",
+    title: "Schedules",
+    url: "/#/schedules",
+  },
   
 ];
 
 export const pointsnav = [];
 export const tierlist = [];
-
+export const schedulenav =[];
 export const capimg = [img0, img1, img2, img3, img4, img5, img6, img7];
 
 export const homeNavigation = [
-  // {
-  //   id: "0",
-  //   title: "Home",
-  //   url: "#home",
-  // },
-  // {
-  //   id: "1",
-  //   title: "Events",
-  //   url: "#event",
-  // },
-  // {
-  //   id: "2",
-  //   title: "Committee",
-  //   url: "#committee",
-  // },
-
-  // {
-  //   id: "3",
-  //   title: "Roadmap",
-  //   url: "#roadmap",
-  // },
-  // {
-  //   id: "4",
-  //   title: "New account",
-  //   url: "#signup",
-  //   onlyMobile: true,
-  // },
-  // {
-  //   id: "5",
-  //   title: "Sign in",
-  //   url: "#login",
-  //   onlyMobile: true,
-  // },
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];

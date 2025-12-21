@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import CardComponent from "../Card/CardComponent";
-import Heading from "../Heading";
 import { Gradient } from "../design/Services";
 import { Rings } from "../design/Hero";
 import PointsTable from "./PointsTable";
@@ -62,11 +61,10 @@ const FetchPointsData = () => {
     );
   }
 
-  // Sort data by points in descending order
+  // Sort 
   const sortedData = [...data].sort((a, b) => b.point - a.point);
 
-  // Extract top 3 points
-  //1st
+  
 
   const topPoints = sortedData.slice(0, 3);
   const fst = topPoints[0];
@@ -103,7 +101,7 @@ const FetchPointsData = () => {
           </div>
 
           <PointsTable rows={remainingPoints} />
-          {/* Display remaining points */}
+        
         </div>
         <Rings />
       </Section>
