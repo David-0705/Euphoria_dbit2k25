@@ -48,7 +48,16 @@ import {
   img5,
   img6,
   img7,
+  bmsLogo,
+  compsLogo,
+  domfLogo,
+  extcLogo,
+  hsLogo,
+  itLogo,
+  mechLogo,
+  itiLogo,
 } from "../assets";
+import { title } from "framer-motion/client";
 
 export const dptpg =[
   // {
@@ -75,58 +84,31 @@ export const navigation = [
     title: "Departments",
     url: "/#/department",
   },
-  {
-    id: "4",
-    title: "Instruction",
-    url: "/#/instruction",
-  },
+ 
   {
     id: "5",
     title: "Tier List",
     url: "/#/tierlist",
   },
+  {
+    id: "6",
+    title: "Schedules",
+    url: "/#/schedules",
+  },
+  {
+    id: "7",
+    title: "Co-ordinators",
+    url: "/#/coordinators",
+  }
   
 ];
 
 export const pointsnav = [];
 export const tierlist = [];
-
+export const schedulenav =[];
 export const capimg = [img0, img1, img2, img3, img4, img5, img6, img7];
 
 export const homeNavigation = [
-  // {
-  //   id: "0",
-  //   title: "Home",
-  //   url: "#home",
-  // },
-  // {
-  //   id: "1",
-  //   title: "Events",
-  //   url: "#event",
-  // },
-  // {
-  //   id: "2",
-  //   title: "Committee",
-  //   url: "#committee",
-  // },
-
-  // {
-  //   id: "3",
-  //   title: "Roadmap",
-  //   url: "#roadmap",
-  // },
-  // {
-  //   id: "4",
-  //   title: "New account",
-  //   url: "#signup",
-  //   onlyMobile: true,
-  // },
-  // {
-  //   id: "5",
-  //   title: "Sign in",
-  //   url: "#login",
-  //   onlyMobile: true,
-  // },
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
@@ -328,7 +310,7 @@ export const benefits = [
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
     light: true,
-    link: "https://www.instagram.com/euphoriadbcl/",
+    link: "/#/coordinators",
   },
 ];
 
@@ -354,7 +336,8 @@ export const departments = [
     url: "/department/comps",
     color1: "#F6EED8",
     color2: "#F6EED8",
-    captain: "Shubham Keluskar",
+    captain: "Suraj Naik",
+    deptlogo: compsLogo,
   },
   {
     id: "1",
@@ -362,15 +345,17 @@ export const departments = [
     url: "/department/mech",
     color1: "#A020F0",
     color2: "#000",
-    captain: "Tyrell Pires",
+    captain: "Prabind Kapar",
+    deptlogo: mechLogo,
   },
   {
     id: "2",
     department: "IT",
     url: "/department/it",
-    color1: "#008000",
+    color1: "#00a900ff",
     color2: "#00FF00",
-    captain: "Ashish Varghese",
+    captain: "Abhishek Agrahari",
+    deptlogo: itLogo,
   },
   {
     id: "3",
@@ -378,15 +363,17 @@ export const departments = [
     url: "/department/extc",
     color1: "#FF0000",
     color2: "#000",
-    captain: "Prathamesh Tadas",
+    captain: "Aryan Arde",
+    deptlogo: extcLogo,
   },
   {
     id: "4",
-    department: "DOMMF",
+    department: "DOMF",
     url: "/department/dommf",
     color1: "#008080",
     color2: "#FFF",
-    captain: "Zuriel Fernandes",
+    captain: "Kevin Carvalho",
+    deptlogo: domfLogo,
   },
   {
     id: "5",
@@ -394,23 +381,26 @@ export const departments = [
     url: "/department/iti",
     color1: "	#FFC0CB",
     color2: "#FFF",
-    captain: "Pradeep Epili",
+    captain: "Pratam Koli",
+    deptlogo: itiLogo,
   },
   {
     id: "6",
     department: "HS",
     url: "/department/hs",
-    color1: "#800080",
+    color1: "#b122b1ff",
     color2: "#000",
-    captain: "Vishaka Acharya",
+    captain: "Shezaad Khan",
+    deptlogo: hsLogo,
   },
   {
     id: "7",
     department: "BMS",
     url: "/department/bms",
-    color1: "	#0096FF",
+    color1: "	#025c9bff",
     color2: "#FFF",
-    captain: "Aishwarya Shetty",
+    captain: "Thomas Anthony",
+    deptlogo: bmsLogo,
   },
 ];
 
@@ -421,9 +411,96 @@ export const captainsData = [
   { department: "I.T" },
   { department: "H.S" },
   { department: "B.M.S" },
-  { department: "D.O.M.M.F" },
+  { department: "D.O.M.F" },
   { department: "I.T.I" },
 ];
+
+export const members = [
+  {
+    id: 1,
+    name: "NEVILLE D'SOUZA",
+    position: "LEAD CO-ORDINATOR",
+    image:'./src/assets/card/2.webp',
+    //import the images
+  },
+  {
+    id: 2,
+    name: "ZAIBA SHAIKH",
+    position: "LEAD CO-ORDINATOR",
+  },
+  {
+    id: 3,
+    name: "TANISHQ BANE",
+    position: "SPONSORSHIP LEAD",
+  },
+  {
+    id: 4,
+    name: "ANDRE FERNANDES",
+    position: "WEB DEVELOPMENT LEAD",
+  },
+  {
+    id: 5,
+    name: "PRATHAMESH PARAB",
+    position: "SENIOR CO-ORDINATOR",
+  },
+  {
+    id: 6,
+    name: "NICHELLE D’SOUZA",
+    position: "SENIOR CO-ORDINATOR",
+  },
+  {
+    id: 7,
+    name: "DWAYNE GEORGE NIXON",
+    position: "SENIOR CO-ORDINATOR",
+  },
+  {
+    id: 8,
+    name: "PRANJAL SAHU",
+    position: "SENIOR CO-ORDINATOR",
+  },
+  {
+    id: 9,
+    name: "AMEY DALVI",
+    position: "SENIOR CO-ORDINATOR",
+  },
+  {
+    id: 10,
+    name: "TIYA TRAVAS",
+    position: "SENIOR CO-ORDINATOR",
+  },
+  {
+    id: 11,
+    name: "AAYUSH PULKUNDWAR",
+    position: "JUNIOR CO-ORDINATOR",
+  },
+  {
+    id: 12,
+    name: "LAETICIA COSTA CORREIA",
+    position: "JUNIOR CO-ORDINATOR",
+  },
+  {
+    id: 13,
+    name: "NICOLE MENEZES",
+    position: "JUNIOR CO-ORDINATOR",
+  },
+  {
+    id: 14,
+    name: "SEONA LOBO",
+    position: "JUNIOR CO-ORDINATOR",
+  },
+  {
+    id: 15,
+    name: "JOSHUA DIAS",
+    position: "JUNIOR CO-ORDINATOR",
+  },
+  {
+    id: 16,
+    name: "LUV SANTOSH SHAH",
+    position: "JUNIOR CO-ORDINATOR",
+  },
+];
+
+
 
 // export const winners = [
 //   {

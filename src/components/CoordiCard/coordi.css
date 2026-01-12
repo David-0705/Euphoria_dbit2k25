@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+body {
+   /* background-color: rgb(45, 1, 87);  */
+   /* background-image: url("./photo-wall-texture-pattern.png"); */
+}
+
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7rem;
+}
+
+.grid {
+  display: grid;
+  width: fit-content;
+}
+
+.grid-two {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+.grid-three {
+  padding-top: 60px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  padding-bottom: 50px;
+}
+
+.card {
+  width: 340px;
+  aspect-ratio: 4 / 5;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: relative;
+  transition: transform 0.35s ease;
+  border-radius: 3%;
+}
+.card:hover {
+  transform: scale(1.06);
+}
+
+.card-text-block {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding-left: 22px;
+  text-align: left;
+  width: 100%;
+}
+
+.card-name {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f5d547;
+}
+
+.card-role {
+  margin-top: 6px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f5d547;
+}
+
+.tag-name {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: #f5d547;
+  font-size: 40px;
+}
+
+.card-photo {
+  width: 200px;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-60%);
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding-top: 4rem;
+  }
+
+  .grid-two,
+  .grid-three {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .card {
+    width: 260px;
+  }
+
+  .card-photo {
+    width: 140px;
+  }
+
+  .card-text-block {
+    padding-left: 16px;
+    line-height: 100%;
+  }
+
+  .card-name {
+    font-size: 22px;
+  }
+
+  .card-role {
+    font-size: 20px;
+  }
+
+  .tag-name {
+    font-size: 26px;
+    text-align: center;
+    line-height: 130%;
+  }
+
+  .lead{
+    padding-top: 15%;
+  }
+}

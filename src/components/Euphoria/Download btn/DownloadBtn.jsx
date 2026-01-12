@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../Button"; 
 import pdf from '../../../assets/brouchere/Euphoria.pdf'
 
+
 const DownloadButton = () => {
   const handleDownload = () => {
     // Optionally log or perform actions before download
@@ -9,8 +10,12 @@ const DownloadButton = () => {
   };
 
   return (
-    <Button href={pdf} onClick={handleDownload} name="Euphoria_25.pdf">
-     Brochure for Euphoria 2025
+    // <Button href='/registeration' onClick={handleDownload} name="Euphoria_25.pdf">
+    //  Register Now!!!
+    //   </Button>
+
+          <Button href='#/forms ' >
+     Register Now!!!
       </Button>
   );
 };

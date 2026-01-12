@@ -12,12 +12,14 @@ const Section = ({
     <div
       id={id}
       className={`
+        
       relative 
       ${
         customPaddings ||
         `py-10 lg:py-8 xl:py-10 ${crosses ? "lg:py-10 xl:py-10" : ""}`
       } 
       ${className || ""}`}
+      
     >
       {children}
 

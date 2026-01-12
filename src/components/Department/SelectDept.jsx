@@ -4,6 +4,8 @@ import Section from "../Section";
 import { departments } from "../../constants";
 import Heading from "../Heading";
 import GlowingText from "../design/Glowingtext";
+import FutPlayercard from "../FutCard/FutCard";
+import "./dept.css"
 
 const SelectDept = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -21,35 +23,13 @@ const SelectDept = () => {
       </div>
 
       <div className="relative scroll-pt-96 px-4 lg:pl-64 lg:pr-[1.5625rem] xl:pl-[35px] xl:pr-[35px]">
-        <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-7">
-          {departments.map((department, index) => (
-            <div
-              className="border-2 rounded-2xl relative flex items-center justify-center"
-              key={index}
-              style={{
-                borderColor: hoveredIndex === index ? department.color1 : "",
-              }}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <PixelCanvas
-                colors={["#808080", "#5a5a5a", "#cbd5e1"]}
-                hoverColors={[department.color1, department.color2]}
-                gap={10}
-                speed={25}
-                noFocus={false}
-                url={department.url}
-                department={department.department.toLowerCase()}
+        <div className="cards">
+          {/*"grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-7"*/}
+          {departments.map((department) => (
+            <FutPlayercard 
+              key={department.id}
+              deptName={department.department.replace(/\./g, "")}
               />
-              <p
-                style={{
-                  color: hoveredIndex === index ? department.color1 : "",
-                }}
-                className="absolute text-sm md:text-base text-center"
-              >
-                {department.department}
-              </p>
-            </div>
           ))}
         </div>
       </div>

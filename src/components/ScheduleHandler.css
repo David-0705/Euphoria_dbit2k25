@@ -1,0 +1,105 @@
+/* Base (Desktop First) */
+.shmain {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 24px;
+  padding: 24px 0;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .shmain {
+    gap: 20px;
+    padding: 20px 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .shmain {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 16px;
+    padding: 16px 12px;
+  }
+}
+
+/* Loading text */
+.sh-loading {
+  text-align: center;
+  font-size: 1rem;
+  color: #f9c744;
+  margin-top: 40px;
+  letter-spacing: 1px;
+}
+/* Wrapper */
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* Base tabs row */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Primary vs secondary spacing */
+.tabs.primary {
+  margin-bottom: 4px;
+}
+
+.tabs.secondary {
+  opacity: 0.9;
+}
+
+/* Tab button */
+.tab {
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid #ffee00;
+  background: #111827;
+  color: #f50101;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.tab:hover {
+  background: #f3f4f6;
+}
+
+/* Active state */
+.tab.active {
+  background: #fff;
+  color: #333;
+  border-color: #111827;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Secondary tabs slightly smaller */
+.tabs.secondary .tab {
+  padding: 8px 18px;
+  font-size: 0.9rem;
+}
+
+/* Mobile friendly */
+@media (max-width: 480px) {
+  .tabs {
+    justify-content: space-between;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+
+
+

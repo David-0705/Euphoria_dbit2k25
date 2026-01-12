@@ -12,6 +12,17 @@ import { EuphoriaEvent } from "./components/services/index";
 import { useState, useEffect, } from "react";
 import { useParams, useLocation } from 'react-router-dom';
 import Instruction from './Pages/Instruction';
+import Registration from './Pages/Registration';
+import RegistrationFormPage from "./pages/RegistrationFormPage";
+import Schedules from "./Pages/Schedule";
+import Coordi from './Pages/Coordi';
+
+
+
+// import GoogleFormsComponent from './components/Registration_Forms/Forms';
+
+
+
 // import Demo from './components/Euphoria/demo';
 
 const EventDetail = ({ data }) => {
@@ -22,6 +33,9 @@ const EventDetail = ({ data }) => {
   //   console.log('STitle is missing');
   // }
   // console.log('STitle:', STitle); // Log to confirm if `STitle` is received
+
+  
+
 
   const event = data?.sportRuleBooks.find(event => event.sportCheck === STitle) ||
                 data?.paEvents.find(event => event.paCheck === STitle) ||
@@ -60,12 +74,22 @@ const App = () => {
 
   return (
 
-    <Routes>
+    // <Routes className="h-screen w-screen bg-['] bg-cover bg-no-repeat bg-center">
+   <Routes>
+
       <Route
         index
         element={
           <>
             <Home />
+          </>
+        }
+      />
+      <Route
+        path="/schedules"
+        element={
+          <>
+            <Schedules />
           </>
         }
       />
@@ -109,6 +133,33 @@ const App = () => {
           </>
         }
       />
+       <Route
+        path="/registration"
+        element={
+          <>
+            <Registration/> 
+          </>
+        }
+      />
+      <Route
+      path="/coordinators"
+      element={
+          <>
+            <Coordi/> 
+          </>
+        }
+      />
+
+      <Route path="/register/:formKey" element={<RegistrationFormPage />} />
+
+      {/* <Route
+        path="/forms"
+        element={
+          <>
+            <GoogleFormsComponent/>
+          </>
+        }
+      /> */}
 
       {/* <Route path="/" element={<home />} /> */}
       {/* <Route path="/game/:title" element={data?.euphoriaEvents && <Events data={data.euphoriaEvents[0]} />} /> */}

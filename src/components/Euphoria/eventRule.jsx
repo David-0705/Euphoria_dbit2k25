@@ -53,6 +53,7 @@ export default function eventRule({ data }) {
                                             <h1 className="text-2xl font-bold">{data.sportTitle || data.paTitle || data.laTitle || data.indoorTitle}</h1>
                                             <div>
                                                 <BackButton />
+                                                
                                             </div>
                                         </div>
                                         <img

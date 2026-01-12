@@ -1,308 +1,171 @@
-import React, { useRef, useState } from "react";
-import Section from "./Section";
-import Heading from "./Heading";
-import theme from "../assets/videos/theme_reveal.mp4";
-import { service1, service2, service3, check, marathon } from "../assets";
-import { brainwaveServices, brainwaveServicesIcons } from "../constants";
-import {
-  // PhotoChatMessage,
-  Gradient,
-  VideoBar,
-  // VideoChatMessage,
-} from "./design/Services";
-import Data from './Euphoria/fixture.json'
-import './Euphoria/fixture.css';
-import { COMPS, IT, HS, DOMMF, BMS, EXTC, MECH, ITI } from "../assets";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import React from "react";
 
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { marathon } from "../assets";
+import logo from "../assets/hero/EuohoriaLogo.webp";
+import matchUpImg from "../assets/DSC00767.webp";
+import crown from "../assets/elements/_Group_ 7.png";
+import label from "../assets/label/_Group_ 2.png";
+import label1 from "../assets/label/_Group_ 3.png";
+import lightning from "../assets/elements/A_Group_ 2.png";
+import diamond from "../assets/elements/_Group_.png";
+import doller from "../assets/elements/E_Group_ 7.png";
 
+import "./ServicesVS.css";
 
-const eventDay = [
-  
-    {
-      "MATCH NO.": "M301",
-      "SPORT": "ATHLETICS",
-      "DEPARTMENT": "ALL",
-      "TIME": "7:00 am to 9:30 am",
-      "Player1": "N/A",
-      "Player2": "N/A",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M302",
-      "SPORT": "BOX CRICKET(BOYS)",
-      "DEPARTMENT": "MECH vs IT",
-      "ROUND": "Final",
-      "TIME": "10:00",
-      "Player1": "MECH",
-      "Player2": "IT",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M303",
-      "SPORT": "BOX CRICKET(GIRLS)",
-      "DEPARTMENT": "COMPS vs EXTC",
-      "ROUND": "Final",
-      "TIME": "11:00",
-      "Player1": "COMPS",
-      "Player2": "EXTC",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M304",
-      "SPORT": "KABADDI(BOYS)",
-      "DEPARTMENT": "BMS vs ITI",
-      "ROUND": "Third Place",
-      "TIME": "11:00",
-      "Player1": "BMS",
-      "Player2": "ITI",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M305",
-      "SPORT": "TUG OF WAR(BOYS)",
-      "DEPARTMENT": "MECH vs COMPS",
-      "ROUND": "Final",
-      "TIME": "10:30",
-      "Player1": "MECH",
-      "Player2": "COMPS",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M306",
-      "SPORT": "TUG OF WAR(GIRLS)",
-      "DEPARTMENT": "BMS vs HS",
-      "ROUND": "Final",
-      "TIME": "11:00",
-      "Player1": "BMS",
-      "Player2": "HS",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M307",
-      "SPORT": "THROWBALL(GIRLS)",
-      "DEPARTMENT": "DOMMF vs BMS",
-      "ROUND": "Final",
-      "TIME": "12:00",
-      "Player1": "DOMMF",
-      "Player2": "BMS",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M308",
-      "SPORT": "KABADDI(BOYS)",
-      "DEPARTMENT": "IT vs EXTC",
-      "ROUND": "Final",
-      "TIME": "12:00",
-      "Player1": "IT",
-      "Player2": "EXTC",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M309",
-      "SPORT": "BASKETBALL(BOYS)",
-      "DEPARTMENT": "IT vs BMS",
-      "ROUND": "Final",
-      "TIME": "1:00",
-      "Player1": "IT",
-      "Player2": "BMS",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M310",
-      "SPORT": "BASKETBALL(GIRLS)",
-      "DEPARTMENT": "COMPS vs BMS",
-      "ROUND": "Final",
-      "TIME": "12:30",
-      "Player1": "COMPS",
-      "Player2": "BMS",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M311",
-      "SPORT": "VOLLEYBALL(GIRLS)",
-      "DEPARTMENT": "DOMMF vs BMS",
-      "ROUND": "Final",
-      "TIME": "1:00",
-      "Player1": "DOMMF",
-      "Player2": "BMS",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M312",
-      "SPORT": "VOLLEYBALL(BOYS)",
-      "DEPARTMENT": "MECH vs BMS",
-      "ROUND": "Final",
-      "TIME": "2:00",
-      "Player1": "MECH",
-      "Player2": "BMS",
-      "Date": "31st Jan"
-    },
-    {
-      "MATCH NO.": "M313",
-      "SPORT": "FIELD FOOTBALL",
-      "DEPARTMENT": "BMS vs COMPS",
-      "ROUND": "Final",
-      "TIME": "3:00",
-      "Player1": "BMS",
-      "Player2": "COMPS",
-      "Date": "31st Jan"
-    }
-
-  
-  
-];
-
-// import Generating from "./Generating";
-const Jersey = {
-  COMPS, HS, DOMMF, BMS, EXTC, MECH, ITI, IT
-};
-
-const Services = () => {
-  const videoRef = useRef(null); // Reference to the video element
-  const [isPlaying, setIsPlaying] = useState(true); // Video play state
-  const [progress, setProgress] = useState(0); // Video progress state
-  const matchData = Data["BASEKETBALL(B)"].filter(match => match.date === "16th Jan").slice(0, 4);
-
-  const handlePlayPause = () => {
-    if (videoRef.current) {
-      if (videoRef.current.paused) {
-        videoRef.current.play();
-        setIsPlaying(true);
-      } else {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      }
-    }
-  };
-
-  const handleProgress = () => {
-    if (videoRef.current) {
-      const progress =
-        (videoRef.current.currentTime / videoRef.current.duration) * 100;
-      setProgress(progress);
-    }
-  };
-
+export default function Services() {
   const handleMarathonClick = () => {
-    window.open('https://drive.google.com/drive/folders/1q8fif1LsAwa6AkUY9TSrGcafAuoY4b1H', '_blank');
+    window.open(
+      "https://drive.google.com/drive/folders/1q8fif1LsAwa6AkUY9TSrGcafAuoY4b1H",
+      "_blank"
+    );
   };
+
+  const Label = ({ title, date, src }) => (
+    <div className="relative w-96 h-[500px] flex items-center justify-center">
+      <img
+        src={src}
+        alt="Label"
+        className="absolute inset-0 w-full h-full object-contain"
+      />
+      <div className="relative z-10 text-slate-950 font-black uppercase text-center">
+        <h2 className="text-2xl tracking-wider">{title}</h2>
+        {date && <h4 className="text-sm mt-1">{date}</h4>}
+      </div>
+    </div>
+  );
 
   return (
-    <Section id="how-to-use">
-      <div className="container">
-        <Heading title="Upcoming Events" />
+    <section
+      id="Events"
+      className="
+        relative
+        w-full
+        min-h-screen
+        flex
+        flex-col
+        items-center
+        gap-24
+        px-6 sm:px-12 md:block
+        md:h-[65rem]
+        mt-20 mb-40
+      "
+    >
+      <h1 className="text-5xl sm:text-6xl font-black uppercase text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 shadow-neonGraffiti mb-12">
+  Upcoming Events
+</h1>
 
-        <div className="relative">
 
+      {/* ================= LOGO ================= */}
+      <div className="relative mt-24 flex justify-center md:absolute md:top-36 md:right-60 md:rotate-[15deg] md:z-30">
+        <div className="relative flex items-center justify-center animate-floatLogo">
+          <img
+            src={lightning}
+            className="absolute -left-14 top-1/2 -translate-y-1/2 w-20 -rotate-45 animate-lightningPulse"
+            alt=""
+          />
 
-          <div className="relative z-1 grid gap-5 lg:grid-cols-2">
-            <div onClick={handleMarathonClick} className="relative min-h-[20rem] border border-n-1/10 rounded-3xl overflow-hidden hover:cursor-pointer">
-              <div className="absolute inset-0">
-                <img
-                  src={marathon}
-                  className="h-full w-full object-cover"
-                  width={630}
-                  height={750}
-                  alt="robot"
-                />
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h2 className="h2 mb-0 p-0">Marathon</h2>
-                <h4 className="h5 mb-2 text-n-2">January 11th</h4>
-              </div>
-            </div>
+          <img
+            src={logo}
+            alt="Logo"
+            className="
+              w-52 mt-7
+              drop-shadow-[0_0_20px_rgba(255,200,0,0.7)]
+              drop-shadow-[0_0_30px_rgba(255,120,0,0.5)]
+            "
+          />
 
-            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
-              <Swiper navigation={true} modules={[Navigation]} className="mySwiper h-auto">
-                <SwiperSlide>
-                  <div className="py-12 px-0 xl:px-8">
-                    <h4 className="h4 mb-4">Match Fixtures</h4>
-                    <div className="flex flex-col items-center gap-2 m-4 overflow-hidden">
-                      {eventDay.slice(0, 7).map((match, index) => (
-                        <div key={index} className="match-container relative h-auto flex items-center justify-between overflow-hidden ">
-                          <img src={Jersey[match["Player1"]]} className="flag1 w-16 h-auto" />
-                          <div className="match-details relative flex flex-col gap-1 h-auto text-center">
-                            <p className="h6 text-stone-900 font-bold text-base sm:text-lg">{match["SPORT"]}</p>
-                            <p className="text-sm sm:text-base">{match["DEPARTMENT"]}</p>
-                            <p className="text-sm sm:text-base">{match["Date"]} at <span className="time">{match["TIME"]}</span></p>
-                          </div>
-                          <img src={Jersey[match["Player2"]]} className="flag w-16 h-auto" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="py-12 px-0 xl:px-8">
-                    <h4 className="h4 mb-4">Match Fixtures</h4>
-                    <div className="flex flex-col items-center gap-2 m-4">
-                      {eventDay.slice(6,13).map((match, index) => (
-                        <div key={index} className="match-container relative h-auto flex items-center justify-between overflow-hidden">
-                          <img src={Jersey[match["Player1"]]} className="flag1 w-16 h-auto" />
-                          <div className="match-details relative flex flex-col gap-1 h-auto text-center">
-                            <p className="h6 text-stone-900 font-bold text-base sm:text-lg">{match["SPORT"]}</p>
-                            <p className="text-sm sm:text-base">{match["DEPARTMENT"]}</p>
-                            <p className="text-sm sm:text-base">{match["Date"]} at <span className="time">{match["TIME"]}</span></p>
-                          </div>
-                          <img src={Jersey[match["Player2"]]} className="flag w-16 h-auto" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </SwiperSlide>
-                {/* <SwiperSlide>
-                  <div className="py-12 px-0 xl:px-8">
-                    <h4 className="h4 mb-4">Match Fixtures</h4>
-                    <div className="flex flex-col items-center gap-2 m-4">
-                      {eventDay.slice(12, 20).map((match, index) => (
-                        <div key={index} className="match-container relative h-auto flex items-center justify-between overflow-hidden">
-                          <img src={Jersey[match["Player1"]]} className="flag1 w-16 h-auto" />
-                          <div className="match-details relative flex flex-col gap-1 h-auto text-center">
-                            <p className="h6 text-stone-900 font-bold text-base sm:text-lg">{match["SPORT"]}</p>
-                            <p className="text-sm sm:text-base">{match["DEPARTMENT"]}</p>
-                            <p className="text-sm sm:text-base">{match["Date"]} at <span className="time">{match["TIME"]}</span></p>
-                          </div>
-                          <img src={Jersey[match["Player2"]]} className="flag w-16 h-auto" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </SwiperSlide> */}
-                
-              </Swiper>
+          <img
+            src={lightning}
+            className="absolute -right-14 top-1/2 -translate-y-1/2 w-20 rotate-45 scale-x-[-1] animate-lightningPulse"
+            alt=""
+          />
 
-              <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
-                <video
-                  ref={videoRef}
-                  src={theme}
-                  className="w-full h-full object-cover"
-                  onTimeUpdate={handleProgress}
-                  width={520}
-                  height={400}
-                  muted
-                  autoPlay
-                  loop
-                  playsInline
-                ></video>
-                <VideoBar
-                  isPlaying={isPlaying}
-                  progress={progress}
-                  onPlayPause={handlePlayPause}
-                />
-              </div>
-            </div>
-          </div>
-          <Gradient />
+          <img
+            src={crown}
+            alt="Crown"
+            className="absolute -top-20 left-3 -translate-x-1/2 w-36 animate-floatCrown"
+          />
         </div>
       </div>
-    </Section>
-  );
-};
 
-export default Services;
+      {/* ================= MARATHON ================= */}
+      <div className="relative mt-10 w-full max-w-[95%] h-[36rem] sm:h-[38rem] md:absolute md:top-0 md:left-0 md:w-[70%] md:h-[40rem] md:z-20 p-4 md:p-0">
+        <div
+          onClick={handleMarathonClick}
+          className="
+            relative w-full h-full overflow-hidden cursor-pointer
+            rounded-2xl
+            bg-cyan-400/10
+            shadow-[0_0_25px_rgba(0,255,255,0.6)]
+            md:bg-transparent md:shadow-none md:rounded-none
+            vs-mask-1
+          "
+        >
+          <img
+            src={marathon}
+            alt="Marathon"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Label title="Marathon" date="January 24th" src={label} />
+          </div>
+        </div>
+      </div>
+
+      {/* ================= MATCHUPS ================= */}
+      <div className="relative w-full max-w-[95%] h-[32rem] md:absolute md:bottom-0 md:right-0 md:w-[70%] md:h-[40rem] md:z-10 md:translate-x-16 md:translate-y-16 p-4 md:p-0">
+        <a href="#/schedules">
+          <div
+            className="
+              relative w-full h-full overflow-hidden
+              rounded-2xl
+              bg-cyan-400/10
+              shadow-[0_0_25px_rgba(0,255,255,0.6)]
+              md:bg-transparent md:shadow-none md:rounded-none
+              vs-mask-2
+            "
+          >
+            <img
+              src={matchUpImg}
+              alt="Matchups"
+              className="w-full h-full object-cover brightness-75 contrast-110 saturate-110"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Label title="Matchups" src={label1} />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      {/* ================= DIAMOND ================= */}
+      <div className="relative mb-24 flex justify-center md:absolute md:bottom-40 md:left-60 md:z-40 p-4 md:p-0">
+        <div className="relative w-60 h-40">
+          <img
+            src={diamond}
+            alt="Diamond"
+            className="
+              w-60 rotate-[-15deg] animate-floatLogo
+              drop-shadow-[0_0_20px_rgba(255,200,0,0.7)]
+              drop-shadow-[0_0_30px_rgba(255,120,0,0.5)]
+            "
+          />
+
+          {[
+            "-top-6 left-8 rotate-[-20deg]",
+            "-top-8 right-0 rotate-[15deg]",
+            "bottom-2 -left-8 rotate-[10deg]",
+            "-bottom-6 right-4 rotate-[-10deg]",
+          ].map((pos, i) => (
+            <img
+              key={i}
+              src={doller}
+              alt=""
+              className={`absolute ${pos} w-12 opacity-75 animate-dollarShake`}
+              style={{ animationDelay: `${i * 0.4}s` }}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

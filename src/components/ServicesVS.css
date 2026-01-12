@@ -1,0 +1,59 @@
+/* Desktop (default) */
+.vs-mask-1,
+.vs-mask-2 {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* Mobile / small screens ONLY */
+/* REMOVE SVG MASKS ON SMALL SCREENS */
+@media (max-width: 768px) {
+  .vs-mask-1,
+  .vs-mask-2 {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+}
+
+
+/* SVG MASKS ONLY (cannot be Tailwind) */
+.vs-mask-1 {
+  -webkit-mask-image: url("../assets/frame1.svg");
+  mask-image: url("../assets/frame1.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.vs-mask-2 {
+  -webkit-mask-image: url("../assets/frame2.svg");
+  mask-image: url("../assets/frame2.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* Neon / Graffiti style for headings (warm colors) */
+.shadow-neonGraffiti {
+  text-shadow:
+    2px 2px 0 #FFD700,   /* gold */
+    -2px -2px 0 #FFA500, /* orange */
+    2px -2px 0 #FF4500,  /* orange-red */
+    -2px 2px 0 #FF8C00,  /* dark orange */
+    0 0 10px #FFD700,
+    0 0 20px #FFA500,
+    0 0 30px #FF4500;
+  font-family: 'Permanent Marker', cursive; /* Graffiti-style font */
+}

@@ -3,6 +3,8 @@ import SelectDept from "../Department/SelectDept";
 import { Gradient } from "./Services";
 import { GradientLight } from "./Benefits";
 import { Diamonds } from "./Hero";
+import bg from "../CoordiCard/pngegg-Photoroom.png";
+import bg1 from "../CoordiCard/bg1.png";
 
 const Departmentsdesign = () => {
     return (
@@ -13,11 +15,11 @@ const Departmentsdesign = () => {
           </div>
   
           {/* Other elements, with higher z-index to appear on top */}
-          <div className="relative bottom-96 right-10">
+          <div className="relative bottom-[400px] right-72">
             <GradientLight />
           </div>
           <div className="relative bottom-36 right-52">
-            <Gradient />
+            
           </div>
   
      

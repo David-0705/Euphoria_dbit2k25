@@ -2,15 +2,13 @@ import FetchPointsData from "../components/Points/FetchPointsData";
 
 import DefaultPage from "../components/DefaultPage";
 import { pointsnav } from "../constants";
-import CardComponent from "../components/Card/CardComponent";
-import { Gradient } from "../components/design/Services";
-import { BackgroundCircles } from "../components/design/Hero";
+import Leaderboard from "../components/Points/Leaderboards";
 
 const Points = () => {
   return (
     <>
     <DefaultPage nav={pointsnav}>
-      <FetchPointsData />
+      <Leaderboard/>
     </DefaultPage>
     </>
   );

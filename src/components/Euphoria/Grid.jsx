@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { DebateDUO } from '../../assets';
 import { Gradient } from '../design/Services';
+import bg1 from "../../components/CoordiCard/bg1.png";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -353,7 +354,7 @@ function Grid() {
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings id="event">
-      <Gradient/>
+      
       <div className="m-10">
         <Swiper navigation={true} modules={[Navigation]} autoHeight={true} className="mySwiper">
           
@@ -612,7 +613,12 @@ function Grid() {
 
         </Swiper>
       </div>
-      
+      <div className="absolute left-0 top-36">
+        <Gradient src={bg1} />
+      </div>
+          <div className="absolute bottom-5 rotate-[170deg] right-10">
+        <Gradient src={bg1} />
+      </div>
     </Section>
   );
 }

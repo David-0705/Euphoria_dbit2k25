@@ -5,9 +5,8 @@ import Departmentsdesign from "../components/design/Department";
 
 const Departments = () => {
     return (
-      <div>
+      <div className="overflow-hidden">
         <DefaultPage nav={departments}>
-    
           <Departmentsdesign/>
         </DefaultPage>
       </div>
