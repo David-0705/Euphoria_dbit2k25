@@ -16,6 +16,7 @@ import Registration from './Pages/Registration';
 import RegistrationFormPage from "./pages/RegistrationFormPage";
 import Schedules from "./Pages/Schedule";
 import Coordi from './Pages/Coordi';
+import EventInstructions from './components/Euphoria/EventInstructions';
 
 
 
@@ -149,6 +150,14 @@ const App = () => {
           </>
         }
       />
+
+      <Route
+      path="/instructions/:categoryId/:eventId"
+      element={
+            <EventInstructions />
+          }
+      />
+
 
       <Route path="/register/:formKey" element={<RegistrationFormPage />} />
 

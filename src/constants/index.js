@@ -56,6 +56,14 @@ import {
   itLogo,
   mechLogo,
   itiLogo,
+  compsCaptain,
+  mechCaptain,
+  extcCaptain,
+  itCaptain,
+  itiCaptain,
+  hsCaptain,
+  domfCaptain,
+  bmsCaptain,
 } from "../assets";
 import { title } from "framer-motion/client";
 
@@ -106,7 +114,14 @@ export const navigation = [
 export const pointsnav = [];
 export const tierlist = [];
 export const schedulenav =[];
-export const capimg = [img0, img1, img2, img3, img4, img5, img6, img7];
+export const capimg = [compsCaptain,
+                      mechCaptain,
+                      itCaptain,
+                      extcCaptain,
+                      domfCaptain,
+                      itiCaptain,
+                      hsCaptain,
+                      bmsCaptain];
 
 export const homeNavigation = [
 ];
@@ -420,78 +435,95 @@ export const members = [
     id: 1,
     name: "NEVILLE D'SOUZA",
     position: "LEAD CO-ORDINATOR",
-    image:'./src/assets/card/2.webp',
+    image:'./src/assets/card/nevile.png',
     //import the images
   },
   {
     id: 2,
     name: "ZAIBA SHAIKH",
     position: "LEAD CO-ORDINATOR",
+     image:'./src/assets/card/zeba.png',
   },
   {
     id: 3,
     name: "TANISHQ BANE",
     position: "SPONSORSHIP LEAD",
+     image:'./src/assets/card/tanishq.png',
+     
   },
   {
     id: 4,
     name: "ANDRE FERNANDES",
     position: "WEB DEVELOPMENT LEAD",
+    image:'./src/assets/card/andre.png',
   },
   {
     id: 5,
     name: "PRATHAMESH PARAB",
     position: "SENIOR CO-ORDINATOR",
+     image:'./src/assets/card/prathamesh.png',
+    
+    
   },
   {
     id: 6,
     name: "NICHELLE D’SOUZA",
     position: "SENIOR CO-ORDINATOR",
+     image:'./src/assets/card/nichelle.png',
   },
   {
     id: 7,
     name: "DWAYNE GEORGE NIXON",
     position: "SENIOR CO-ORDINATOR",
+     image:'./src/assets/card/dwyane.png',
   },
   {
     id: 8,
     name: "PRANJAL SAHU",
     position: "SENIOR CO-ORDINATOR",
+     image:'./src/assets/card/pranjal.png',
   },
   {
     id: 9,
     name: "AMEY DALVI",
     position: "SENIOR CO-ORDINATOR",
+     image:'./src/assets/card/amey.png',
   },
   {
     id: 10,
     name: "TIYA TRAVAS",
     position: "SENIOR CO-ORDINATOR",
+     image:'./src/assets/card/tiya.png',
   },
   {
     id: 11,
     name: "AAYUSH PULKUNDWAR",
     position: "JUNIOR CO-ORDINATOR",
+     image:'./src/assets/card/aayush.png',
   },
   {
     id: 12,
     name: "LAETICIA COSTA CORREIA",
     position: "JUNIOR CO-ORDINATOR",
+     image:'./src/assets/card/laetcia.png',
   },
   {
     id: 13,
     name: "NICOLE MENEZES",
     position: "JUNIOR CO-ORDINATOR",
+     image:'./src/assets/card/nicole.png',
   },
   {
     id: 14,
     name: "SEONA LOBO",
     position: "JUNIOR CO-ORDINATOR",
+     image:'./src/assets/card/seona.png',
   },
   {
     id: 15,
     name: "JOSHUA DIAS",
     position: "JUNIOR CO-ORDINATOR",
+     image:'./src/assets/card/joshua.png',
   },
   {
     id: 16,

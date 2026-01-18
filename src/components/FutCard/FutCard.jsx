@@ -58,11 +58,10 @@ const FutPlayercard = ({ deptName }) => {
 
         <div style={{ background: color1 }} className="bottom">
           <div className="content">
-            <p className="h6 text-black">{captainName}</p>
-            <p className="h3 text-black">{DepartmentName}</p>
+            <p className="h3 text-black dept-text">{DepartmentName}</p>
           </div>
           <div className="bottom-bottom text-black">
-            <p className="text">Department Captain</p>
+            <p className="text">{captainName}</p>
           </div>
         </div>
       </div>

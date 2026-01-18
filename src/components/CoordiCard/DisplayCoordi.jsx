@@ -1,6 +1,7 @@
 import React from "react";
 import template from "../../assets/coordi/template_new.png";
 import template1 from "../../assets/coordi/template1.png";
+import "./DisplayCoordi.css"
 
 
 const DisplayCoordi = ({ name, position, image }) => {

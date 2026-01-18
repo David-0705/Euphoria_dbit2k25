@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Press+Start+2P&family=VT323&display=swap');
+
+.instructions-page {
+  min-height: 100vh;
+  padding: 40px 30px;
+  background: linear-gradient(280deg, #150824, #301252);
+  color: white;
+}
+
+.instructions-page button {
+  background: none;
+  border: none;
+  color: #ffcc70;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.instructions-page button:hover {
+  text-decoration: underline;
+}
+
+.instructions-page h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.instructions-page p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+
+.instructions-page ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+}
+
+.instructions-page li {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  position: relative;
+  padding-left: 45px;
+}
+
+.instructions-page li::before {
+  content: "✔";
+  position: absolute;
+  left: 18px;
+  color: #ffcc70;
+  font-weight: bold;
+}
+
+.event-name{
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+
+}

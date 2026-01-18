@@ -3,7 +3,7 @@ import DisplayCoordi from "./DisplayCoordi";
 import { members } from "../../constants";
 import "./coordi.css";
 
-const CoordiLayout = () => {
+function CoordiLayout ()  {
   const lead = members.slice(0, 4);
   const senior = members.slice(4,10);
   const junior = members.slice(10,16);

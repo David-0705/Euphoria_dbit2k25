@@ -1,0 +1,42 @@
+.card {
+  height: 520px;   /* ⬆️ from 460 */
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+
+.photo-placeholder {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+  right: 16px;
+  height: 380px;   /* ⬆️ from ~340 */
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+
+
+.card-photo {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: scale(1.35);
+}
+
+
+.card-text-block {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  height: 80px;
+  text-align: center;
+}
+

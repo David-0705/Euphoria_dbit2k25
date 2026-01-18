@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&family=Press+Start+2P&family=VT323&display=swap');
+
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #000;
+  font-family:
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+  border-radius: 0 0 16px 16px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: linear-gradient(90deg, #150824, #250e40);
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Arrow icons */
+.mySwiper .swiper-button-next::after,
+.mySwiper .swiper-button-prev::after {
+  font-size: 25px;
+  color: white;
+}
+
+/* Arrow hitbox (optional) */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  width: 25px;
+  height: 25px;
+}
+
+/* Pagination dots */
+.mySwiper .swiper-pagination-bullet {
+  background-color: white;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: white;
+  opacity: 1;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  position: relative;
+  padding-bottom: 40px;
+  
+}
+
+.carousel-header {
+    position: relative;
+    width: 600px;
+    height: 100px;
+    color: #fff;
+    z-index: 1;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 12px 12px 0 0;
+}
+
+.category {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  border-radius: 16px 16px 0 0; 
+}
+
+.category-names {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;   /* allows text to overlay the image */
+  top: 50%;             /* vertically center */
+  left: 50%;            /* horizontally center */
+  transform: translate(-50%, -50%); /* perfect centering */
+  color: white;         /* contrast against background */
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6); /* optional: makes text readable */
+  text-align: center;   /* in case text wraps */
+  letter-spacing: 4px;
+}
+
+.sport-slide{
+    position: absolute;       /* overlay text */
+  top: 50%;                 /* vertical center */
+  left: 50%;                /* horizontal center */
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  text-align: center;
+  background: rgba(0,0,0,0.5); /* optional semi-transparent box */
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    width: 70%;
+    height: 200px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .carousel-header {
+    width: 70%;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .category-names {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .sport-slide {
+    font-size: 14px;  /* smaller text on mobile */
+    padding: 4px 8px;
+    letter-spacing: 2px;
+  }
+
+  .mySwiper .swiper-button-next::after,
+  .mySwiper .swiper-button-prev::after {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .swiper {
+    width: 70%;
+    height: 200px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .carousel-header {
+    width: 70%;
+    height: 60px;
+    font-size: 1rem;
+  }
+
+  .category-names {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .sport-slide {
+    font-size: 14px;  /* smaller text on mobile */
+    padding: 4px 8px;
+    letter-spacing: 2px;
+  }
+
+  .mySwiper .swiper-button-next::after,
+  .mySwiper .swiper-button-prev::after {
+    font-size: 18px;
+  }
+}
+
+
+.sport-slide-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sport-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px; /* optional: match your Swiper rounding */
+}
+
+
