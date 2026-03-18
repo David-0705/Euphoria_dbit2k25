@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body , html,#root{
-height: 100vh;
+min-height: 100vh;
 width: 100%;
 padding: 0;
 margin: 0;
@@ -81,6 +81,8 @@ margin: 0;
 /* Leaderboard Styles */
 .leaderboard-container {
   font-family: system-ui, -apple-system, sans-serif;
+  background: transparent; /* Add this */
+  position: relative;
 }
 
 
@@ -90,31 +92,9 @@ margin: 0;
   color: hsl(var(--foreground));
   overflow: hidden;
 
-  background:
-    /* diagonal highlight band */
-    linear-gradient(
-      115deg,
-      transparent 0%,
-      hsl(45 100% 50% / 0.18) 18%,
-      transparent 36%
-    ),
-
-    /* main diagonal slabs */
-    repeating-linear-gradient(
-      115deg,
-      hsl(0 0% 10%) 0px,
-      hsl(0 0% 10%) 140px,
-      hsl(0 0% 6%) 140px,
-      hsl(0 0% 6%) 280px
-    ),
-
-    /* base */
-    linear-gradient(
-      180deg,
-      hsl(0 0% 8%),
-      hsl(0 0% 3%)
-    );
+  
 }
+
 .leaderboard-page::before {
   content: "";
   position: absolute;
@@ -122,13 +102,6 @@ margin: 0;
   pointer-events: none;
   z-index: 0;
 
-  background:
-    linear-gradient(
-      115deg,
-      transparent 0%,
-      hsl(0 80% 50% / 0.25) 12%,
-      transparent 24%
-    );
 }
 .main-container,
 .leaderboard-hero,
@@ -145,49 +118,6 @@ margin: 0;
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   min-height: 100vh;
-}
-
-/* Header */
-.leaderboard-header {
-  border-bottom: 1px solid hsl(var(--border));
-  background: linear-gradient(180deg, hsl(0 0% 8% / 0.9), hsl(0 0% 4% / 0.95));
-  backdrop-filter: blur(12px);
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0;
-  padding: 24px;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.header-icon {
-  width: 32px;
-  height: 32px;
-  color: hsl(var(--gold));
-  filter: drop-shadow(0 0 8px hsl(var(--gold) / 0.5));
-}
-
-.header-title {
-  font-size: 30px;
-  font-weight: bold;
-  background: linear-gradient(135deg, hsl(45 100% 60%), hsl(45 100% 45%));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.header-subtitle {
-  color: hsl(var(--muted-foreground));
-  margin-top: 8px;
 }
 
 /* Main Content */
@@ -232,6 +162,8 @@ margin: 0;
   .podium-second { order: 1; }
   .podium-first { order: 2; }
   .podium-third { order: 3; }
+
+  
 }
 
 /* Podium Cards */

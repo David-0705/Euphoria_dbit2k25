@@ -100,3 +100,57 @@ body {
   border-color: var(--accent);
   transform: translateX(8px);
 }
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .tiers {
+    width: 92%;
+    gap: 1.2rem;
+    grid-template-columns: 1fr; 
+  }
+
+  .tier-header {
+    padding: 1rem;
+  }
+
+  .tier-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .tier-content {
+    padding: 1rem;
+  }
+
+  .category h3 {
+    font-size: 1.05rem;
+  }
+
+  .tierContent {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    gap: 8px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 2.3rem;
+  }
+
+  .tiers {
+    width: 92%;
+    gap: 1.5rem;
+    grid-template-columns: 1fr; 
+  }
+
+  .tier-header h2 {
+    font-size: 1.5rem;
+  }
+}

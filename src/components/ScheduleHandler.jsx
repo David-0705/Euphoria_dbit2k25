@@ -460,8 +460,8 @@ const STATIC_OUT = [
   // WEDNESDAY – 28/01/26
   {
     id: "out-49",
-    teamA: "SF 1",
-    teamB: "SF 2",
+    teamA: "IT",
+    teamB: "MECH",
     date: "28/01/26",
     time: "10:00 AM",
     gender: "boy",
@@ -525,8 +525,8 @@ const STATIC_OUT = [
   },
   {
     id: "out-56",
-    teamA: "SF 1",
-    teamB: "SF 2",
+    teamA: "BMS",
+    teamB: "EXTC",
     date: "29/01/26",
     time: "3:30 PM",
     gender: "boy",

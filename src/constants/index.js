@@ -435,33 +435,33 @@ export const members = [
     id: 1,
     name: "NEVILLE D'SOUZA",
     position: "LEAD CO-ORDINATOR",
-    image:'./src/assets/card/nevile.png',
+    image:'./src/assets/card/nevile.webp',
     //import the images
   },
   {
     id: 2,
     name: "ZAIBA SHAIKH",
     position: "LEAD CO-ORDINATOR",
-     image:'./src/assets/card/zeba.png',
+     image:'./src/assets/card/zeba.webp',
   },
   {
     id: 3,
     name: "TANISHQ BANE",
     position: "SPONSORSHIP LEAD",
-     image:'./src/assets/card/tanishq.png',
+     image:'./src/assets/card/tanishq.webp',
      
   },
   {
     id: 4,
     name: "ANDRE FERNANDES",
     position: "WEB DEVELOPMENT LEAD",
-    image:'./src/assets/card/andre.png',
+    image:'./src/assets/card/andre.webp',
   },
   {
     id: 5,
     name: "PRATHAMESH PARAB",
     position: "SENIOR CO-ORDINATOR",
-     image:'./src/assets/card/prathamesh.png',
+     image:'./src/assets/card/prathamesh.webp',
     
     
   },
@@ -469,61 +469,61 @@ export const members = [
     id: 6,
     name: "NICHELLE D’SOUZA",
     position: "SENIOR CO-ORDINATOR",
-     image:'./src/assets/card/nichelle.png',
+     image:'./src/assets/card/nichelle.webp',
   },
   {
     id: 7,
     name: "DWAYNE GEORGE NIXON",
     position: "SENIOR CO-ORDINATOR",
-     image:'./src/assets/card/dwyane.png',
+     image:'./src/assets/card/dwyane.webp',
   },
   {
     id: 8,
     name: "PRANJAL SAHU",
     position: "SENIOR CO-ORDINATOR",
-     image:'./src/assets/card/pranjal.png',
+     image:'./src/assets/card/pranjal.webp',
   },
   {
     id: 9,
     name: "AMEY DALVI",
     position: "SENIOR CO-ORDINATOR",
-     image:'./src/assets/card/amey.png',
+     image:'./src/assets/card/amey.webp',
   },
   {
     id: 10,
     name: "TIYA TRAVAS",
     position: "SENIOR CO-ORDINATOR",
-     image:'./src/assets/card/tiya.png',
+     image:'./src/assets/card/tiya.webp',
   },
   {
     id: 11,
     name: "AAYUSH PULKUNDWAR",
     position: "JUNIOR CO-ORDINATOR",
-     image:'./src/assets/card/aayush.png',
+     image:'./src/assets/card/aayush.webp',
   },
   {
     id: 12,
     name: "LAETICIA COSTA CORREIA",
     position: "JUNIOR CO-ORDINATOR",
-     image:'./src/assets/card/laetcia.png',
+     image:'./src/assets/card/laetcia.webp',
   },
   {
     id: 13,
     name: "NICOLE MENEZES",
     position: "JUNIOR CO-ORDINATOR",
-     image:'./src/assets/card/nicole.png',
+     image:'./src/assets/card/nicole.webp',
   },
   {
     id: 14,
     name: "SEONA LOBO",
     position: "JUNIOR CO-ORDINATOR",
-     image:'./src/assets/card/seona.png',
+     image:'./src/assets/card/seona.webp',
   },
   {
     id: 15,
     name: "JOSHUA DIAS",
     position: "JUNIOR CO-ORDINATOR",
-     image:'./src/assets/card/joshua.png',
+     image:'./src/assets/card/joshua.webp',
   },
   {
     id: 16,
@@ -532,38 +532,8 @@ export const members = [
   },
 ];
 
+//updates
 
-
-// export const winners = [
-//   {
-//     "department":{
-//     bms: [
-//       { "Event": "Table Tennis Girls Singles", "Place": "1st", "Winner": "Adhira" },
-//       { "Event": "Table Tennis Girls Singles", "Place": "2nd", "Winner": "Shonell" },
-//       { "Event": "Table Tennis Girls Singles", "Place": "3rd", "Winner": "Vidhyashree" },
-//       { "Event": "Table Tennis Girls Doubles", "Place": "1st", "Winner": "Adhira David & Vidyashree" },
-//       { "Event": "Table Tennis Doubles", "Place": "3rd", "Winner": "Yashneil & Abdul" },
-//       { "Event": "80m Girls", "Place": "1st", "Winner": "Chloe Xaviers" },
-//       { "Event": "80m Girls", "Place": "2nd", "Winner": "Sofia Nadar" },
-//       { "Event": "80m Girls", "Place": "3rd", "Winner": "Shivani Sawant" },
-//       { "Event": "200m Girls", "Place": "1st", "Winner": "Chloe Xaviers" },
-//       { "Event": "200m Girls", "Place": "2nd", "Winner": "Shivani Sawant" },
-//       { "Event": "200m Girls", "Place": "3rd", "Winner": "Tia Xaviers" },
-//       { "Event": "400m Girls", "Place": "1st", "Winner": "Tia Xaviers" },
-//       { "Event": "400m Girls", "Place": "2nd", "Winner": "Chloe Xaviers" },
-//       { "Event": "400m Girls", "Place": "3rd", "Winner": "Shivani Sawant" },
-//       { "Event": "800m Boys", "Place": "2nd", "Winner": "Adrian Soans" },
-//       { "Event": "Relay Girls", "Place": "1st", "Winner": "BMS" },
-//       { "Event": "Mixed Relay", "Place": "2nd", "Winner": "BMM" },
-//       { "Event": "VolleyBall Girls", "Place": "1st", "Winner": "BMS" },
-//       { "Event": "Box Cricket Girls", "Place": "3rd", "Winner": "BMS" },
-//       { "Event": "Throwball", "Place": "1st", "Winner": "BMS" },
-//       { "Event": "Rink Football Girls", "Place": "1st", "Winner": "BMS (Team Kyra)" },
-//       { "Event": "Basketball Girls", "Place": "2nd", "Winner": "BMS" },
-//       { "Event": "Basketball Boys", "Place": "1st", "Winner": "BMS" },
-//       { "Event": "Kabaddi", "Place": "3rd", "Winner": "BMS" },
-//       { "Event": "Field Football", "Place": "1st", "Winner": "BMS" }
-//     ],
 
 //     comps: [
 //       { "Event": "Table Tennis Boys Singles", "Place": "2nd", "Winner": "Nigel" },

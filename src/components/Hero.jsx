@@ -44,7 +44,7 @@ const Hero = () => {
       <div
         className="
           absolute z-20
-          left-[25vw] bottom-[70vh] scale-75
+          left-[25vw] bottom-[50vh] scale-75
           sm:left-[25vw] sm:bottom-[calc(12vh+100px)] sm:scale-90
           md:left-[20vw] md:bottom-[15vh] md:scale-100
           lg:left-[4vw] lg:bottom-[15vh] lg:scale-100
@@ -60,7 +60,7 @@ const Hero = () => {
       <div
         className="
           absolute z-20
-          right-[20vw] bottom-[60vh] scale-75
+          right-[20vw] bottom-[40vh] scale-75
           sm:right-[20vw] sm:bottom-[calc(12vh+500px)] sm:scale-90
           md:right-[15vw] md:bottom-[15vh] md:scale-100
           lg:right-[4vw] lg:bottom-[15vh] lg:scale-100
